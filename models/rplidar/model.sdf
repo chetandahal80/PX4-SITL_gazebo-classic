@@ -7,7 +7,7 @@
         <pose>0 0 0 0 0 0</pose>
         <mass>0.19</mass>
         <inertia>
-          <ixx>4.15e-6</ixx>
+          <ixx>2.407e-6</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>2.407e-6</iyy>
@@ -36,7 +36,7 @@
           </scan>
           <range>
             <min>0.2</min>
-            <max>6</max>
+            <max>7</max>
             <resolution>0.05</resolution>
           </range>
           <noise>
@@ -52,7 +52,7 @@
         </plugin>
         <always_on>1</always_on>
         <update_rate>10</update_rate>
-        <visualize>true</visualize>
+        <visualize>True</visualize>
       </sensor>
     </link>
   </model>

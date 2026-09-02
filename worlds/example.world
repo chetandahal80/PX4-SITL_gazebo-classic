@@ -1,0 +1,282 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <world name='default'>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <model name='building'>
+    <pose frame=''>0 0 0 0 -0 0</pose>
+    <link name='Wall_1'>
+      <collision name='Wall_1_Collision'>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_1_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Bricks</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>0 6.0 0 0 -0 0</pose>
+    </link>
+    <link name='Wall_2'>
+      <collision name='Wall_2_Collision'>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_2_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Bricks</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>6.0 0 0 0 -0 -1.5707</pose>
+    </link>
+    <link name='Wall_3'>
+      <collision name='Wall_3_Collision'>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_3_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Bricks</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>0 -6.0 0 0 -0 3.14159</pose>
+    </link>
+    <link name='Wall_4'>
+      <collision name='Wall_4_Collision'>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_4_Visual'>
+        <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>12.0 0.15 4.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Bricks</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>-6.0 0 0 0 -0 1.5707</pose>
+    </link>
+    <static>1</static>
+  </model>
+    <model name='box_z=0.5m'>
+    <link name='link'>
+      <pose frame=''>0 0 2.5 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <pose frame=''>0 0 2.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 5.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <pose frame=''>0 0 2.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 5.0</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  
+    <model name='box_z=0.6m'>
+    <link name='link'>
+      <pose frame=''>-2.61035 -4.32355 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 5.0</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 5.0</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+    <include>
+      <name>cinder_block</name>
+      <uri>model://cinder_block</uri>
+      <pose frame=''>-1.98915 4.41578 0 0 -0 0</pose>
+    </include>
+    <include>
+      <name>cardboard_box_0</name>
+      <uri>model://cardboard_box</uri>
+      <pose frame=''>0.61689 -4.93546 0.15 0 -0 0</pose>
+    </include>
+    <include>
+      <name>cardboard_box_1</name>
+      <uri>model://cardboard_box</uri>
+      <pose frame=''>2.00053 -4.93546 0.15 0 -0 0</pose>
+    </include>
+    <include>
+      <name>jersey_barrier_0</name>
+      <uri>model://jersey_barrier</uri>
+      <pose frame=''>4.10862 -1.10365 0 0 -0 0</pose>
+    </include>
+    <include>
+      <name>jersey_barrier_1</name>
+      <uri>model://jersey_barrier</uri>
+      <pose frame=''>2.67185 2.63868 0 0 -0 1.5707</pose>
+    </include>
+
+    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so" />
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>12.804 6.59761 20.6782 0 0.963643 -2.65182</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    
+    <model name="radiation_source_1">
+      <pose>-3.0 0 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link_radiation_source">
+        <pose>0 0 0 0 0 0</pose>
+        <visual name="visual_radiation_source">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry><box><size>0.1 0.1 0.1</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+        <sensor name="radiation_sources" type="radiation_source">
+          <always_on>1</always_on>
+          <update_rate>1.0</update_rate>
+          <topic>source_1/gamma</topic>
+          <plugin filename="libradiation_source_plugin.so" name="radiation_source_plugin"/>
+        </sensor>
+      </link>
+    </model>
+    <model name="radiation_source_2">
+      <pose>1.0 2.0 0.4 0 0 0</pose>
+      <static>true</static>
+      <link name="link_radiation_source">
+        <pose>0 0 0 0 0 0</pose>
+        <visual name="visual_radiation_source">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry><box><size>0.1 0.1 0.1</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+        <sensor name="radiation_sources" type="radiation_source">
+          <always_on>1</always_on>
+          <update_rate>1.0</update_rate>
+          <topic>source_2/gamma</topic>
+          <plugin filename="libradiation_source_plugin.so" name="radiation_source_plugin"/>
+        </sensor>
+      </link>
+    </model>
+  </world>
+</sdf>

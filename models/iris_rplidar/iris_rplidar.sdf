@@ -40,9 +40,9 @@
 
     <include>
       <uri>model://rplidar</uri>
-      <pose>0 0 0.1 0 0 0</pose>
+      <pose>0.0 0 0.1 0 0 0</pose>
     </include>
-    <joint name="rplidar_joint" type="revolute">
+    <joint name="rplidar_joint" type="fixed">
       <child>rplidar::link</child>
       <parent>iris::base_link</parent>
       <axis>

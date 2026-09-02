@@ -85,6 +85,47 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
+    <link name='/radiation_sensor_link'>
+      <pose>0 0 0.055 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.015</mass>
+        <inertia>
+          <ixx>1e-03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-03</iyy>
+          <iyz>0</iyz>
+          <izz>1e-03</izz>
+        </inertia>
+      </inertial>
+      <visual name="radiation_sensor_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.02 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <sensor name="radiation_sensor" type="radiation_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>1.0</update_rate>
+        <topic>{{ sensor_topic }}</topic>
+        <visualize>true</visualize>
+        <plugin name="radiation_sensor_plugin" filename="libradiation_sensor_plugin.so"/>
+      </sensor>
+    </link>
+    <joint name='/radiation_sensor_joint' type='fixed'>
+      <child>/radiation_sensor_link</child>
+      <parent>base_link</parent>
+    </joint>
     <link name='rotor_0'>
       <pose>0.13 -0.22 0.023 0 0 0</pose>
       <inertial>
@@ -576,6 +617,13 @@
       <accelerometerRandomWalk>0.006</accelerometerRandomWalk>
       <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
       <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
+    </plugin>
+    <plugin name="quadrotor_groundtruth_sim" filename="libgazebo_ros_p3d.so">
+        <updateRate>100.0</updateRate>
+        <bodyName>base_link</bodyName>
+        <topicName>ground_truth/state</topicName>
+        <gaussianNoise>0.0</gaussianNoise>
+        <frameName>world</frameName>
     </plugin>
   </model>
 </sdf>
